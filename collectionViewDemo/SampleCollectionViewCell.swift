@@ -10,6 +10,7 @@ import UIKit
 
 class SampleCollectionViewCell: UICollectionViewCell {
 
+  @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A282b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FeedCollectionView" customModule="collectionViewDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="FPE-Qz-tOR" id="D3G-pY-U09"/>
+                <outlet property="nibView" destination="iN0-l3-epB" id="tFR-w5-xHx"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FeedCollectionView" customModule="collectionViewDemo" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-Qz-tOR">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ete-Sp-oJU">
+                    <rect key="frame" x="277" y="456" width="46" height="30"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="G1L-Ws-F10"/>
+                        <constraint firstAttribute="width" constant="46" id="qJO-gc-mRj"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                </button>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="FPE-Qz-tOR">
+                    <rect key="frame" x="-8" y="92" width="600" height="329"/>
+                    <animations/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C1X-8j-6gc">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -20,16 +35,18 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
+            <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="FPE-Qz-tOR" secondAttribute="bottom" id="6zC-vb-Wnp"/>
+                <constraint firstAttribute="bottom" secondItem="ete-Sp-oJU" secondAttribute="bottom" constant="114" id="OND-Qs-W8E"/>
+                <constraint firstItem="ete-Sp-oJU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="277" id="PpA-fw-9X5"/>
                 <constraint firstAttribute="trailing" secondItem="FPE-Qz-tOR" secondAttribute="trailing" id="UNI-iD-ZHa"/>
+                <constraint firstAttribute="trailing" secondItem="ete-Sp-oJU" secondAttribute="trailing" constant="277" id="aCp-dW-dOC"/>
                 <constraint firstItem="FPE-Qz-tOR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fyu-vf-4EW"/>
                 <constraint firstItem="FPE-Qz-tOR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="jG7-x7-azC"/>
             </constraints>
-            <connections>
-                <outlet property="collectionView" destination="FPE-Qz-tOR" id="ggx-TH-2CM"/>
-            </connections>
+            <point key="canvasLocation" x="293" y="305"/>
         </view>
     </objects>
 </document>

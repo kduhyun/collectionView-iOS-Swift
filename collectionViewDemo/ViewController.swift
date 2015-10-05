@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        collectionView.setup()
+//        collectionView.setup()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
