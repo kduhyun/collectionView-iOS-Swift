@@ -18,6 +18,7 @@
 		792FAFD81BBDBF1A00CEEA51 /* SampleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792FAFD61BBDBF1A00CEEA51 /* SampleCollectionViewCell.xib */; settings = {ASSET_TAGS = (); }; };
 		792FAFDA1BBDC08F00CEEA51 /* FeedCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792FAFD91BBDC08F00CEEA51 /* FeedCollectionView.swift */; settings = {ASSET_TAGS = (); }; };
 		792FAFDC1BBDC0A000CEEA51 /* FeedCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792FAFDB1BBDC0A000CEEA51 /* FeedCollectionView.xib */; settings = {ASSET_TAGS = (); }; };
+		E1D47B5E1BC63EB200904E07 /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = E1D47B5D1BC63EB200904E07 /* profile.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		792FAFD61BBDBF1A00CEEA51 /* SampleCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleCollectionViewCell.xib; sourceTree = "<group>"; };
 		792FAFD91BBDC08F00CEEA51 /* FeedCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCollectionView.swift; sourceTree = "<group>"; };
 		792FAFDB1BBDC0A000CEEA51 /* FeedCollectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCollectionView.xib; sourceTree = "<group>"; };
+		E1D47B5D1BC63EB200904E07 /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				792FAFAE1BBDBEFC00CEEA51 /* Assets.xcassets */,
 				792FAFB01BBDBEFC00CEEA51 /* LaunchScreen.storyboard */,
 				792FAFB31BBDBEFC00CEEA51 /* Info.plist */,
+				E1D47B5D1BC63EB200904E07 /* profile.png */,
 				792FAFD51BBDBF1A00CEEA51 /* SampleCollectionViewCell.swift */,
 				792FAFD61BBDBF1A00CEEA51 /* SampleCollectionViewCell.xib */,
 				792FAFD91BBDC08F00CEEA51 /* FeedCollectionView.swift */,
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				792FAFB21BBDBEFC00CEEA51 /* LaunchScreen.storyboard in Resources */,
+				E1D47B5E1BC63EB200904E07 /* profile.png in Resources */,
 				792FAFAF1BBDBEFC00CEEA51 /* Assets.xcassets in Resources */,
 				792FAFD81BBDBF1A00CEEA51 /* SampleCollectionViewCell.xib in Resources */,
 				792FAFDC1BBDC0A000CEEA51 /* FeedCollectionView.xib in Resources */,
@@ -499,6 +503,7 @@
 				792FAFCE1BBDBEFC00CEEA51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		792FAFCF1BBDBEFC00CEEA51 /* Build configuration list for PBXNativeTarget "collectionViewDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +512,7 @@
 				792FAFD11BBDBEFC00CEEA51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		792FAFD21BBDBEFC00CEEA51 /* Build configuration list for PBXNativeTarget "collectionViewDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +521,7 @@
 				792FAFD41BBDBEFC00CEEA51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

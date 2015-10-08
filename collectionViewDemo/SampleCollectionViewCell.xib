@@ -12,7 +12,7 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="116" height="148"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-mp-ESF">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile.png" translatesAutoresizingMaskIntoConstraints="NO" id="ph9-mp-ESF">
                         <rect key="frame" x="8" y="8" width="100" height="100"/>
                         <animations/>
                         <constraints>
@@ -48,4 +48,7 @@
             <point key="canvasLocation" x="340" y="307"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="profile.png" width="550" height="365"/>
+    </resources>
 </document>
