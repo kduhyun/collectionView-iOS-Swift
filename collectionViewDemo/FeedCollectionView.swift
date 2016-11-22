@@ -29,12 +29,12 @@ class FeedCollectionView: UIView, UICollectionViewDelegate, UICollectionViewData
       setup()
     }
   
-  func addNibSubview(nibName: String) -> UIView {
-    let bundle = NSBundle(forClass: self.dynamicType)
+  func addNibSubview(_ nibName: String) -> UIView {
+    let bundle = Bundle(for: type(of: self))
     let nib = UINib(nibName: nibName, bundle: bundle)
-    let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
-    view.frame = CGRect(origin: CGPointZero, size: bounds.size)
-    view.autoresizingMask = [.FlexibleHeight, .FlexibleWidth]
+    let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+    view.frame = CGRect(origin: CGPoint.zero, size: bounds.size)
+    view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     addSubview(view)
     return view
   }
@@ -42,7 +42,7 @@ class FeedCollectionView: UIView, UICollectionViewDelegate, UICollectionViewData
     func setup() {
         nibView = addNibSubview("FeedCollectionView")
         let nipName = UINib(nibName: "SampleCollectionViewCell", bundle:nil)
-        collectionView.registerNib(nipName, forCellWithReuseIdentifier: "cell")
+        collectionView.register(nipName, forCellWithReuseIdentifier: "cell")
         collectionView.delegate = self
         collectionView.dataSource = self
       SampleCollectionViewCell.registerCellNib(collectionView)
@@ -52,16 +52,16 @@ class FeedCollectionView: UIView, UICollectionViewDelegate, UICollectionViewData
 // MARK: Collection view delegate
 extension FeedCollectionView {
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! SampleCollectionViewCell
+    @objc(collectionView:cellForItemAtIndexPath:) func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SampleCollectionViewCell
       cell.nameLabel.text = "Hii jatin"
             return cell
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 200
     }
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  @objc(collectionView:layout:sizeForItemAtIndexPath:) func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: 116, height: 148)
   }
   
@@ -70,9 +70,9 @@ extension FeedCollectionView {
 }
 
 extension UICollectionViewCell {
-  class func registerCellNib(collectionView: UICollectionView) {
-    let bundle = NSBundle(forClass: self)
+  class func registerCellNib(_ collectionView: UICollectionView) {
+    let bundle = Bundle(for: self)
 
-    collectionView.registerNib(UINib(nibName: "SampleCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "cell")
+    collectionView.register(UINib(nibName: "SampleCollectionViewCell", bundle: bundle), forCellWithReuseIdentifier: "cell")
   }
 }
